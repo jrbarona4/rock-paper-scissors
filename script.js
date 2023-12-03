@@ -31,8 +31,11 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (i = 0; i <= playerScore || computerScore; i++){
-        if (playerScore === 5 || computerScore === 5) {
-            console.log('Game Over');
+        if (playerScore === 5) {
+            console.log('Game Over, Player Wins!');
+            break;
+        } else if (computerScore === 5) {
+            console.log('Game Over, Computer Wins!')
             break;
         } else {
             console.log(playRound());
